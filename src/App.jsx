@@ -1,6 +1,7 @@
 import React from 'react'
 import { usePaystackPayment } from "react-paystack"
 import PaymentButton from './PaymentButton'
+import PaymentCustomer from './PaymentCustomer'
 
 function App() {
   let date = (new Date()).getTime().toString()
@@ -51,6 +52,11 @@ function App() {
        <div >
         <h4 style={{ marginTop: "5em", textDecoration: "underline", textTransform: "capitalized" }}>Second Option. Payment with button</h4>
          <PaymentButton config={config} />
+       </div>
+
+       <div >
+        <h4 style={{ marginTop: "5em", textDecoration: "underline", textTransform: "capitalized" }}>Third Option. Payment Customer Method</h4>
+         <PaymentCustomer config={config} />
        </div>
     </div>
   )
